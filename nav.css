@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: tan;
+  font-family: tahoma;
+}
+
+
+.box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn1 , .btn2,.btn3,.btn4,.btn5,.btn6{
+  font-size: 18px;
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  background-color: beige;
+  border: 2px solid blue;
+  color: blue;
+  border-radius: 10px;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, .5);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s all ease ;
+}
+
+/* for button 1 */
+
+.btn1::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-90%);
+  transition: .5s all ease;
+}
+
+ .btn1:hover::before{
+transform: translateX(100%);
+
+
+}
+.btn1:hover{
+  color: rgb(255, 118, 118);
+  border-color: white;
+}
+
+
+/* for button 2 */
+
+.btn2::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-180%);
+  transition: .5s all ease;
+}
+.btn2::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(180%);
+  transition: .5s all ease;
+}
+
+ .btn2:hover::before{
+transform: translateY(-50%);
+
+}
+
+ .btn2:hover::after{
+transform: translateY(50%);
+
+}
+.btn2:hover{
+  color: white;
+  border-color: white;
+}
+
+/* for button 3 */
+.btn3{
+  color: white;
+  border-color: white;
+}
+.btn3::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-50%);
+  transition: .5s all ease;
+}
+
+.btn3:hover::before{
+transform: translateX(-100%);
+
+}
+
+.btn3::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgb(32, 32, 122);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(50%);
+  transition: .5s all ease;
+}
+
+
+ .btn3:hover::after{
+transform: translateX(100%);
+
+}
+.btn3:hover{
+  color: blue;
+  border-color: rgb(0, 26, 255);
+}
+
+
+
+
+/* for button 4 */
+.btn4{
+  color: white;
+  border-color: white;
+}
+.btn4::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-50%);
+  transition: .5s all ease;
+}
+
+.btn4:hover::before{
+transform: translateY(-100%);
+
+}
+
+.btn4::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgb(206, 206, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(50%);
+  transition: .5s all ease-in-out;
+}
+
+
+ .btn4:hover::after{
+transform: translateY(100%);
+
+}
+.btn4:hover{
+  color: green;
+  border-color: green;
+}
+
+/* for button 5 */
+.btn5{
+  color: white;
+  border-color: white;
+}
+.btn5::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: .5s all ease;
+}
+
+.btn5:hover::before{
+transform: translateX(0%) rotate(180deg);
+
+}
+
+.btn5::after{
+  content: '';
+  width: 50%;
+  height: 100%;
+  background-color: rgb(135, 214, 7);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(100%);
+  transition: .5s all ease-in-out;
+}
+
+
+.btn5:hover::after{
+transform: translateX(0%) rotate(-180deg);
+
+}
+.btn5:hover{
+  color: green;
+  border-color: green;
+}
+
+
+
+/* for button 6 */
+.btn6{
+  color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+}
+
+.btn6:hover{
+  color: white;
+  border-color: white;
+}
+.btn6::before {
+  content: '';
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-1%) translateY(-40%) scale(0) ;
+  transition: .5s all ease;
+  border-radius: 50%;
+}
+
+.btn6:hover::before{
+transform: translateX(-1%) translateY(-40%) scale(100%);
+}
+
+
+/*  for article  */
+
+.box article{
+  width: 200px;
+  height: 180px;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: -2px 2px 5px rgba(0, 0,0, .5);
+}
+
+.box article img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: .5s all ease;
+}
+
+.box article:hover img{
+transform: scale(1.2);
+}
+
+
+.box article::before{
+  content: 'Article';
+  position: absolute;
+  top:10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-210%);
+  z-index: 1;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  transition: .5s all ease;
+
+}
+
+.box article:hover::before{
+  transform: translateX(-50%) ;
+
+}
+
+
+
+.box article::after{
+  content: 'This is a beautiful picture. ';
+  position: absolute;
+  bottom:0%;
+  left: 0%;
+  transform: translateY(100%) ;
+  z-index: 1;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  transition: .5s all ease;
+  background: rgba(255, 255, 255, .5 );
+  text-align: center;
+  padding: 10px 25px;
+
+}
+
+.box article:hover::after{
+  transform:translateY(0%);
+
+}
